@@ -130,6 +130,7 @@ Metrik evaluasi yang digunakan adalah Root Mean Squared Error (RMSE) yang menguk
 Gambar 5. *Metric evaluation loss*
 
 ![rmse evaluasi](https://github.com/andharsm/supermarket-product-recommendation-system/assets/114974933/511ba185-1c26-4514-be03-91c0a34fb8f6)
+
 Gambar 6. *Metric evaluation loss* RMSE
 
 Berdasarkan Gambar 5 dan Gambar 6, hasil pelatihan menunjukan metrik yang bagus karena penurunan loss dan RMSE pada data test linear dengan data train, dan nilai evaluasinya tidak terlalu jauh hingga akhir pelatihan. Pada epoch terakhir (20) mendapat hasil evaluasi dengan val_loss: 0.0362 - val_root_mean_squared_error: 0.0139.
