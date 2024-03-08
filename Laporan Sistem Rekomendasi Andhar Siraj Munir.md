@@ -258,6 +258,8 @@ Top 10 product recommendation
 
 User 35474 menunjukkan preferensi yang cenderung terfokus pada kebutuhan keluarga dengan anak kecil berdasarkan top 5 best product, mengingat pembelian produk bayi seperti diapers wipes. Selain itu, kecenderungan untuk memilih produk-produk segar dari departemen produce, bersama dengan pembelian minuman sehat seperti air mineral, menunjukkan kesadaran terhadap gaya hidup sehat. Dengan memasukkan produk-produk dari berbagai departemen seperti dairy eggs dan snacks, user ini menunjukkan keinginan untuk diversifikasi dalam pembelian. Rekomendasi tambahan seperti cat food, beers, dan frozen meals menunjukkan potensi minat dalam produk-produk khusus dan variasi. Adanya produk alkohol seperti beers, red wines, dan spirits juga mengindikasikan kemungkinan user ini sebagai peminum alkohol atau memiliki kebutuhan untuk produk alkohol berdasarkan user lainnya. 
 
+Berdasarkan hasil evaluasi menggunakan RMSE, model dapat bekerja secara akurat dengan nilai RMSE yang rendah yaitu 0.0139. Kemudian model juga dapat memberikan rekomendasi produk berdasarkan preferensi pengguna lain yang sama.
+
 ## Referensi
 [1] Lin R-H, Chuang W-W, Chuang C-L, Chang W-S. Applied Big Data Analysis to Build Customer Product Recommendation Model. Sustainability. 2021; 13(9):4985. https://doi.org/10.3390/su13094985
 
