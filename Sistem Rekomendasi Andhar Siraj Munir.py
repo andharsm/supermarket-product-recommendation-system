@@ -207,7 +207,10 @@ plt.ylabel('Jumlah Pesanan')
 plt.xticks(rotation=90, ha='right')  # Menambahkan rotasi untuk label sumbu x
 plt.show()
 
-"""### Top 10 Produk Order pada Prime Time"""
+"""Dari visualisasi diatas, dapat terlihat bahwa produk-produk segar seperti buah dan sayuran mendominasi peringkat teratas. Produk susu seperti yogurt dan susu juga cukup populer, bersama dengan produk camilan seperti keju kemasan, air berkarbonasi, dan chips/pretzel. Produk bebas laktosa dan roti menduduki peringkat terakhir dalam 10 daftar produk yang paling sering dibeli
+
+### Top 10 Produk Order pada Prime Time
+"""
 
 # Filter data untuk prime time (jam 10-15)
 prime_time_data = df[(df['order_hour_of_day'] >= 10) & (df['order_hour_of_day'] <= 15)]
@@ -249,7 +252,10 @@ plt.ylabel('Jumlah Pesanan')
 plt.xticks(rotation=90, ha='right')  # Menambahkan rotasi untuk label sumbu x
 plt.show()
 
-"""### Top 10 Department Order pada Prime Time"""
+"""Dari plot diatas, dapat terlihat bahwa departemen-produk segar seperti buah dan sayuran (Produce) mendominasi peringkat teratas. Produk-produk dasar seperti susu dan telur (Dairy Eggs) serta produk camilan (Snacks) juga sangat populer di antara pelanggan.
+
+### Top 10 Department Order pada Prime Time
+"""
 
 # Filter data untuk prime time (jam 10-15)
 prime_time_data = df[(df['order_hour_of_day'] >= 10) & (df['order_hour_of_day'] <= 15)]
@@ -288,7 +294,10 @@ plt.title('Jumlah Produk setiap Departemen')
 # Show the plot
 plt.show()
 
-"""## Distribusi User dengan Produk Order Terbanyak"""
+"""Dari plot jumlah produk per departemen, terlihat bahwa departemen dengan variasi produk terbanyak adalah "Personal Care" dengan 17 produk, diikuti oleh "Pantry" dengan 12 produk, dan "Frozen" serta "Snacks" masing-masing memiliki 11 produk. Sementara itu, "Bulk", "Missing", dan "Other" memiliki jumlah produk yang sangat terbatas, hanya satu produk.
+
+## Distribusi User dengan Produk Order Terbanyak
+"""
 
 # Menghitung nilai counts product_name untuk setiap user_id
 user_product_counts = df.groupby(['user_id', 'product_name']).size().reset_index(name='total')
@@ -311,7 +320,9 @@ plt.ylabel('Total Produk Order')
 plt.xticks(rotation=0)  # Tanpa rotasi untuk label sumbu x
 plt.show()
 
-"""# Data Preparation
+"""Berdasarkan data jumlah total transaksi (order) per user_id, terlihat bahwa user dengan ID 176478 memiliki jumlah transaksi tertinggi sebanyak 460 kali. Disusul oleh user dengan ID 129928 dan 126305 yang masing-masing memiliki 405 dan 384 transaksi. Insight dari data ini menunjukkan bahwa 10 pengguna teratas) memiliki aktivitas pembelian yang sangat tinggi, memberikan kontribusi signifikan pada total transaksi.
+
+# Data Preparation
 
 ## Menyiapkan Dataset untuk Rekomendasi Produk Berdasarkan Add to Cart
 """
@@ -557,4 +568,6 @@ print('----' * 8)
 for product_name in recommended_product_names:
     product_info = product_count_per_department[product_count_per_department['product_name'] == product_name].iloc[0]
     print(f"Department: {product_info['department']}, Product Name: {product_info['product_name']}")
+
+"""User 35474 menunjukkan preferensi yang cenderung terfokus pada kebutuhan keluarga dengan anak kecil berdasarkan top 5 best product, mengingat pembelian produk bayi seperti diapers wipes. Selain itu, kecenderungan untuk memilih produk-produk segar dari departemen produce, bersama dengan pembelian minuman sehat seperti air mineral, menunjukkan kesadaran terhadap gaya hidup sehat. Dengan memasukkan produk-produk dari berbagai departemen seperti dairy eggs dan snacks, user ini menunjukkan keinginan untuk diversifikasi dalam pembelian. Rekomendasi tambahan seperti cat food, beers, dan frozen meals menunjukkan potensi minat dalam produk-produk khusus dan variasi. Adanya produk alkohol seperti beers, red wines, dan spirits juga mengindikasikan kemungkinan user ini sebagai peminum alkohol atau memiliki kebutuhan untuk produk alkohol berdasarkan user lainnya."""
 
